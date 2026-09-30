@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme inline {
+    --font-sans:
+        Barlow, ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+}
+
+
+.app-multiselect :deep(.multiselect__tags) {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 0;
+    padding: 10px 40px 10px 12px;
+    min-height: unset;
+    font-size: 13px;
+    font-family: inherit;
+}
+
+.app-multiselect :deep(.multiselect__input),
+.app-multiselect :deep(.multiselect__single) {
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    color: #16241F;
+    background: transparent;
+}
+
+.app-multiselect :deep(.multiselect__placeholder) {
+    font-size: 13px;
+    color: #5E7369;
+    padding: 0;
+    margin: 0;
+}
+
+.app-multiselect :deep(.multiselect__select) {
+    height: 100%;
+    padding: 0;
+}
+
+.app-multiselect :deep(.multiselect__select::before) {
+    border-color: #5E7369 transparent transparent;
+}
+
+.app-multiselect :deep(.multiselect--active .multiselect__tags) {
+    border-color: #16241F;
+    box-shadow: none;
+}
+
+.app-multiselect :deep(.multiselect__content-wrapper) {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-top: none;
+    border-radius: 0;
+    font-size: 13px;
+}
+
+.app-multiselect :deep(.multiselect__option) {
+    padding: 10px 12px;
+    min-height: unset;
+}
+
+.app-multiselect :deep(.multiselect__option--highlight) {
+    background: #16241F;
+    color: #fff;
+}
+
+.app-multiselect :deep(.multiselect__option--highlight::after) {
+    background: #16241F;
+}
+
+.app-multiselect :deep(.multiselect__option--selected.multiselect__option--highlight) {
+    background: #b91c1c;
+}
+
+.app-multiselect :deep(.multiselect__option--selected.multiselect__option--highlight::after) {
+    background: #b91c1c;
+}
